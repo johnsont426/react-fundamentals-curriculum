@@ -16,6 +16,7 @@ class App extends React.Component {
 					<Switch>
 						<Route exact path='/' component={Form}/>
 						<Route exact path='/forecast' component={Forecast}/>
+						<Route path='/forecast?city' component={Forecast}/>
 					</Switch>
 				</div>
 			</Router>
