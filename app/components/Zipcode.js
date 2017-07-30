@@ -6,7 +6,6 @@ class Zipcode extends React.Component {
 	constructor(props) {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
 
 		this.state = {
 			city: ''
@@ -20,10 +19,6 @@ class Zipcode extends React.Component {
 				city: value
 			}
 		});
-	}
-
-	handleSubmit(){
-
 	}
 
 	render() {
