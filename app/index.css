@@ -117,3 +117,11 @@ body {
   color: #333;
   font-weight: 100;
 }
+
+.description-container {
+  font-size: 34px;
+  font-weight: 100;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}

@@ -1,7 +1,8 @@
 var React = require('react');
 var Form = require('./Form');
 var Nav = require('./Nav');
-var Forecast = require('./Forecast');
+var Forecast = require('./Forecast').Forecast;
+var Detail = require('./Detail');
 var ReactRouter = require('react-router-dom');
 var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
@@ -15,8 +16,8 @@ class App extends React.Component {
 					<Nav />
 					<Switch>
 						<Route exact path='/' component={Form}/>
-						<Route exact path='/forecast' component={Forecast}/>
-						<Route path='/forecast?city' component={Forecast}/>
+						<Route path='/forecast' component={Forecast}/>
+						<Route path='/detail/:city' component={Detail}/>
 					</Switch>
 				</div>
 			</Router>

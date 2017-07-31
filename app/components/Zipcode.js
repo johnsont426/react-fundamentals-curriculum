@@ -40,7 +40,6 @@ class Zipcode extends React.Component {
 
 Zipcode.propTypes = {
 	style: PropTypes.object,
-	url: PropTypes.string
 }
 
 module.exports = Zipcode;

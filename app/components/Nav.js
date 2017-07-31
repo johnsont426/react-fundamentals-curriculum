@@ -5,7 +5,7 @@ class Nav extends React.Component {
 	render() {
 		return (
 			<div className="navbar">
-				<h1>Title</h1>
+				<h1>Inst Weather</h1>
 				<Zipcode style={{'flexDirection': 'row'}}/>
 			</div>
 		)
