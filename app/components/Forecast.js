@@ -30,7 +30,7 @@ class Day extends React.Component {
 		var date = dt.toLocaleDateString('en-US', options);
 		return (
 			<div className='dayContainer' onClick={this.props.clickHandler}>
-				<img className='weather' src={'/app/images/weather-icons/' + this.props.dayData.weather[0].icon + '.svg'} alt='weather'/>
+				<img className='weather' src={this.props.dayData.weather[0].icon + '.svg'} alt='weather'/>
 				<h2 className='subheader'>{date}</h2>
 			</div>
 		)
@@ -63,7 +63,7 @@ class Forecast extends React.Component {
 			this.setState(function() {
 				return {
 					city: city,
-					forecastArr: results,
+					forecastArr: results.list,
 					loading: false
 				}
 			})
