@@ -1,5 +1,5 @@
-var React = require('react');
-var Zipcode = require('./Zipcode');
+import React from 'react';
+import Zipcode from './Zipcode';
 
 class Nav extends React.Component {
 	render() {
@@ -12,4 +12,4 @@ class Nav extends React.Component {
 	}
 }
 
-module.exports = Nav;
+export default Nav;

@@ -1,6 +1,6 @@
-var React = require('react');
-var PropTypes = require('prop-types');
-var Link = require('react-router-dom').Link;
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class Zipcode extends React.Component {
 	constructor(props) {
@@ -14,7 +14,7 @@ class Zipcode extends React.Component {
 
 	handleChange(event) {
 		var value = event.target.value;
-		this.setState(function(){
+		this.setState(() => {
 			return {
 				city: value
 			}
@@ -42,4 +42,4 @@ Zipcode.propTypes = {
 	style: PropTypes.object,
 }
 
-module.exports = Zipcode;
+export default Zipcode;

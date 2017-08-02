@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 class Loading extends React.Component {
 	constructor(props) {
@@ -9,8 +9,8 @@ class Loading extends React.Component {
 		}
 	}
 	componentDidMount() {
-		var stopper = 'Loading...';
-		this.interval = window.setInterval(function() {
+		const stopper = 'Loading...';
+		this.interval = window.setInterval(() => {
 			if(this.state.text === stopper) {
 				this.setState(function() {
 					return {
@@ -18,13 +18,13 @@ class Loading extends React.Component {
 					}
 				});
 			}else {
-				this.setState(function(previousState) {
+				this.setState((previousState) => {
 					return {
 						text: previousState.text + '.'
 					}
 				});
 			}
-		}.bind(this), 300)
+		}, 300)
 	}
 	componentWillUnmount() {
 		window.clearInterval(this.interval)
@@ -38,4 +38,4 @@ class Loading extends React.Component {
 	}
 }
 
-module.exports = Loading;
+export default Loading;

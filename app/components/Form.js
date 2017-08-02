@@ -1,10 +1,10 @@
-var React = require('react');
-var Zipcode = require('./Zipcode');
+import React from 'react';
+import Zipcode from './Zipcode';
 
 class Form extends React.Component {
 	render() {
 		return (
-			<div className="home-container" style={{'backgroundImage': 'url(http://artist-submarine-48713.netlify.com/app/images/pattern.svg)'}}>
+			<div className="home-container">
 				<h1 className="header">Enter a City and State</h1>
 				<Zipcode />
 			</div>
@@ -12,4 +12,4 @@ class Form extends React.Component {
 	}
 }
 
-module.exports = Form;
+export default Form;

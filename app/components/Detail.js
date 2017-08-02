@@ -1,23 +1,24 @@
-var React = require('react');
-var Day = require('./Forecast').Day;
-var Temp = require('../utils/helpers');
+import React from 'react';
+import { Day } from './Forecast';
+import { convertTemp } from '../utils/helpers';
 
 class Detail extends React.Component {
 	render() {
-		var props = this.props.location.state;
+		const city = this.props.match.params.city;
+		const { weather, temp, humidity } = this.props.location.state;
 		return (
 			<div>
-				<Day dayData={props[1]}/>
+				<Day dayData={this.props.location.state}/>
 				<div className='description-container'>
-					<p>{props[0]}</p>
-					<p>{props[1].weather[0].description}</p>
-					<p>min temp: {Temp(props[1].temp.min)}</p>
-					<p>max temp: {Temp(props[1].temp.max)}</p>
-					<p>humidity: {props[1].humidity}</p>
+					<p>{city}</p>
+					<p>{weather[0].description}</p>
+					<p>min temp: {convertTemp(temp.min)}</p>
+					<p>max temp: {convertTemp(temp.max)}</p>
+					<p>humidity: {humidity}</p>
 				</div>
 			</div>
 		)
 	}
 }
 
-module.exports = Detail
+export default Detail;
